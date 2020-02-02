@@ -1,25 +1,12 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-
-const colours = {
-  orange: "#ef9c3b"
-};
+import { colours } from "../../constants/colours";
 
 const StyledLogo = styled.div`
   width: 80px;
-  margin-top: -45px;
+  margin-top: -90px;
   position: relative;
-`;
-
-const StyledMoon = styled.div`
-  position: absolute;
-  right: 0;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  box-shadow: inset 0px 0px ${colours.orange},
-    inset 0px 15px 0px 0px ${colours.orange};
-  transform: rotate(110deg);
+  transform: scale(2);
 `;
 
 const StyledBars = styled.div`
@@ -36,6 +23,18 @@ const widthAnimation = keyframes`
   to {
     transform: skew(-10deg) scaleX(1);
   }
+`;
+
+const StyledMoon = styled.div`
+  position: absolute;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px ${colours.orange},
+    inset 0px 15px 0px 0px ${colours.orange};
+  transform: rotate(110deg);
+  opacity: 1;
 `;
 
 const StyledBar = styled.div<{ width: number; delay: number }>`
