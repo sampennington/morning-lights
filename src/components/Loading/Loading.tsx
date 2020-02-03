@@ -4,9 +4,9 @@ import { colours } from "../../constants/colours";
 
 const StyledLogo = styled.div`
   width: 80px;
-  margin-top: -90px;
+  height: 80px;
   position: relative;
-  transform: scale(2);
+  align-self: center;
 `;
 
 const StyledBars = styled.div`

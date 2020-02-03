@@ -1,0 +1,16 @@
+{
+  "info": {
+    "name": "shows"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "location": {
+      "type": "string"
+    }
+  },
+  "connection": "default",
+  "collectionName": "shows"
+}
