@@ -19,7 +19,6 @@ type Props = {
 };
 
 const Image = ({ img }: Props) => {
-  console.log({ img });
   return <StyledImage src={img.thumbnail_src} />;
 };
 
