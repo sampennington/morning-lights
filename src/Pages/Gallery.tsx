@@ -24,8 +24,8 @@ const StyledImages = styled.div`
 `)}
 `;
 
-const Art = () => {
-  const { data, error } = useSWR(instagramImages, axios);
+const Gallery = ({ path }: { path: string }) => {
+  const { data } = useSWR(instagramImages, axios);
 
   if (!data) {
     return <Loading />;
@@ -47,4 +47,4 @@ const Art = () => {
   );
 };
 
-export default Art;
+export default Gallery;

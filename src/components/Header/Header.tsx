@@ -4,6 +4,7 @@ import { colours } from "../../constants/colours";
 import logo from "../../resources/morning-lights.jpg";
 import Loading from "../Loading/Loading";
 import { mqMediumUp } from "../../utils/mq";
+import { Link } from "@reach/router";
 
 const StyledHeader = styled.div`
   display: none;
@@ -11,17 +12,22 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   width; 100%;
-  color: ${colours.orange};
+  color: ${colours.pink} !important;
   font-weight: 700;
   font-size: 20px;
   ${mqMediumUp(`
     display: flex;
 
   `)}
+
+  &:visited {
+    color: ${colours.pink} !important;
+  }
 `;
 
-const StyledNavItem = styled.div`
+const StyledNavItem = styled(Link)`
   cursor: pointer;
+  color: ${colours.pink} !important;
 `;
 
 const Logo = styled.img``;
@@ -29,10 +35,10 @@ const Logo = styled.img``;
 const Header = () => (
   <StyledHeader>
     <Logo src={logo} width={150}></Logo>
-    <StyledNavItem>Home</StyledNavItem>
-    <StyledNavItem>Music</StyledNavItem>
-    <StyledNavItem>Art</StyledNavItem>
-    <StyledNavItem>Contact</StyledNavItem>
+    <StyledNavItem to="/">Home</StyledNavItem>
+    <StyledNavItem to="/music">Music</StyledNavItem>
+    <StyledNavItem to="/gallery">Gallery</StyledNavItem>
+    <StyledNavItem to="/contact">Contact</StyledNavItem>
     <Loading />
   </StyledHeader>
 );

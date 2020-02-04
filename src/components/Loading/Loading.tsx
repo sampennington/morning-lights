@@ -31,8 +31,8 @@ const StyledMoon = styled.div`
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  box-shadow: inset 0px 0px ${colours.orange},
-    inset 0px 15px 0px 0px ${colours.orange};
+  box-shadow: inset 0px 0px ${colours.pink},
+    inset 0px 15px 0px 0px ${colours.pink};
   transform: rotate(110deg);
   opacity: 1;
 `;
@@ -43,7 +43,7 @@ const StyledBar = styled.div<{ width: number; delay: number }>`
   height: 8px;
   margin: 4px;
   transform: skew(-10deg);
-  background-color: ${colours.orange};
+  background-color: ${colours.pink};
   transform-origin: left;
   ${({ width, delay }) => `
     animation-delay: ${delay}s;
