@@ -8,7 +8,8 @@ jobs:
 steps:
   - checkout
 
-  - run: cd ./client && yarn install
+  - run: cd ./client
+  - run: yarn install
 
   - aws-s3/sync:
     from: build
