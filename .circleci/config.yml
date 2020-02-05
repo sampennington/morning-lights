@@ -15,9 +15,9 @@ jobs:
       - run: yarn install
 
       - aws-s3/sync:
-        from: build
-        to: "s3://morninglights/"
-        arguments: |
-          --acl public-read \
-          --cache-control "max-age=86400"
-        overwrite: true
+          from: build
+          to: "s3://morninglights/"
+          arguments: |
+            --acl public-read \
+            --cache-control "max-age=86400"
+          overwrite: true
