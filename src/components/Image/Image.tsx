@@ -7,6 +7,7 @@ const StyledImage = styled.img`
   opacity: 0.6;
   transition: opacity 0.5s ease;
   margin-bottom: 5px;
+
   :hover {
     opacity: 1;
   }

@@ -1,11 +1,10 @@
 import React from "react";
-import Header from "./components/Header/Header";
+import { Header, SliderMenu } from "./components";
 import { Router } from "@reach/router";
 import ArtPage from "./Pages/Gallery";
 import Home from "./Pages/Home";
 import { SWRConfig } from "swr";
 import axios from "axios";
-import SliderMenu from "./components/SliderMenu/SliderMenu";
 import { StyledApp } from "./App.styled";
 
 const App = () => {

@@ -5,6 +5,7 @@ import useSWR from "swr";
 import Loading from "../components/Loading/Loading";
 import { Contents } from "../types/ApiResponses";
 import { homePageIntro } from "../constants/contentNames";
+import { Content } from "../components";
 
 const StyledHome = styled.div``;
 
@@ -19,7 +20,11 @@ const Home = ({ path }: { path: string }) => {
 
   return (
     <>
-      <StyledHome>{intro?.title}</StyledHome>
+      <StyledHome>
+        <Content edit={true} id={intro?.id} field="title" data={intro}>
+          {intro?.title}
+        </Content>
+      </StyledHome>
       <StyledHome>{intro?.body}</StyledHome>
     </>
   );
