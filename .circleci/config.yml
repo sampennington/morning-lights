@@ -1,4 +1,4 @@
-version: 2.0
+version: 2.1
 orbs:
   aws-s3: circleci/aws-s3@1.0.11
 jobs:
@@ -10,6 +10,7 @@ jobs:
 
     steps:
       - checkout
+      - run: cd client
       - run: yarn install
 
       - run: yarn build
