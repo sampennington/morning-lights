@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import { mutate } from "swr";
 import { content } from "../../constants/endpoints";
-
-import styled from "styled-components";
 import axios from "axios";
 
 type Props = {
@@ -16,7 +13,6 @@ type Props = {
 const Content = ({ children, edit, data, id, field }: Props) => {
   const [value, setValue] = useState(children);
   const save = () => {
-    console.log("vevefvefv", { data });
     return axios.put(
       `${content}/${id}`,
       { ...data, [field]: value }
