@@ -7,27 +7,24 @@ import { mqMediumUp } from "../../utils/mq";
 import { Link } from "@reach/router";
 
 const StyledHeader = styled.div`
-  display: none;
-  padding: 0px 10px;
+  // display: none;
+  // padding: 0px 10px;
   justify-content: space-between;
   align-items: center;
   width; 100%;
-  color: ${colours.pink} !important;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 24px;3
   ${mqMediumUp(`
     display: flex;
-
   `)}
 
   &:visited {
-    color: ${colours.pink} !important;
   }
 `;
 
 const StyledNavItem = styled(Link)`
   cursor: pointer;
-  color: ${colours.pink} !important;
+  color: ${colours.white};
 `;
 
 const Logo = styled.img``;
@@ -39,7 +36,7 @@ const Header = () => (
     <StyledNavItem to="/music">Music</StyledNavItem>
     <StyledNavItem to="/gallery">Gallery</StyledNavItem>
     <StyledNavItem to="/contact">Contact</StyledNavItem>
-    <Loading />
+    {/* <Loading /> */}
   </StyledHeader>
 );
 
