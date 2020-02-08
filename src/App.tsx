@@ -6,7 +6,7 @@ import { StyledApp } from "./App.styled";
 
 const App = () => {
   return (
-    <StyledApp id="outer-container">
+    <StyledApp>
       <Router id="">
         {/* <Home path="/" /> */}
         <ArtPage path="/" />
