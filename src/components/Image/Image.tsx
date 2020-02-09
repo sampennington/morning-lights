@@ -3,16 +3,26 @@ import styled from "styled-components";
 import { mqLargeUp, mqMediumUp, mqSmallUp } from "../../utils/mq";
 
 const StyledImage = styled.img`
-  ${({ col, row }: { col: number; row: number }) => `
+  ${({
+    col,
+    row,
+    slideLeft
+  }: {
+    col: number;
+    row: number;
+    slideLeft: boolean;
+  }) => `
     width: 100vw;
     opacity: 0.6;
-    transition: opacity 0.8s ease;
+    transition: all 0.8s ease;
     filter: grayscale(100%);
     cursor: pointer;
     object-fit: cover;
     height: ${100 / 3}vh;
     grid-row: ${row} / ${row};
     grid-column: ${col} / ${col};
+    position: relative;
+    right: ${slideLeft ? 100 : 0}vw;
 
     ${mqSmallUp(`
       height: ${100 / 3}vh;
@@ -41,11 +51,20 @@ type Props = {
   onClick: () => void;
   col: number;
   row: number;
+  slideLeft?: boolean;
 };
 
-const Image = ({ img, onClick, col, row }: Props) => {
+const Image = ({ img, onClick, col, row, slideLeft = false }: Props) => {
   console.log({ img });
-  return <StyledImage src={img} onClick={onClick} col={col} row={row} />;
+  return (
+    <StyledImage
+      src={img}
+      onClick={onClick}
+      col={col}
+      row={row}
+      slideLeft={slideLeft}
+    />
+  );
 };
 
 export default Image;

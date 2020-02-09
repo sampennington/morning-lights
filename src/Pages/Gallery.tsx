@@ -46,7 +46,6 @@ const Column = styled.div<{ slideOut?: boolean; col: number; row: number }>`
 const ShowsWrapper = styled.div<{ slideOut?: boolean }>`
   ${({ slideOut }) => `
     position: relative;
-    transform-origin: top;
     bottom: ${slideOut ? 0 : -100}vh;
     grid-column: 2 / 6;
     grid-row: 1 / 3;
@@ -62,38 +61,74 @@ const ShowsWrapper = styled.div<{ slideOut?: boolean }>`
 
 const Gallery = ({ path }: { path: string }) => {
   const [slideOut, setSlideout] = useState(false);
+  const [slideLeft, setSlideLeft] = useState(false);
+
   const doStuff = () => {
     setSlideout(!slideOut);
   };
+
+  // const slideLeftFunc = () => {
+  //   setSlideLeft(!slideLeft);
+  // };
 
   return (
     <>
       <StyledImages>
         <Column col={1} row={2}>
-          <Image img={a} onClick={doStuff} col={1} row={1} />
+          <Image
+            img={a}
+            onClick={doStuff}
+            col={1}
+            row={1}
+            slideLeft={slideLeft}
+          />
           <Image img={e} onClick={doStuff} col={1} row={2} />
           <Image img={f} onClick={doStuff} col={1} row={3} />
         </Column>
 
         <Column col={2} row={2} slideOut={slideOut}>
-          <Image img={h} onClick={doStuff} col={2} row={1} />
+          <Image
+            img={h}
+            onClick={doStuff}
+            col={2}
+            row={1}
+            slideLeft={slideLeft}
+          />
           <Image img={h} onClick={doStuff} col={2} row={2} />
           <Image img={i} onClick={doStuff} col={2} row={3} />
         </Column>
 
         <Column col={3} row={2} slideOut={slideOut}>
-          <Image img={e} onClick={doStuff} col={3} row={1} />
+          <Image
+            img={e}
+            onClick={doStuff}
+            col={3}
+            row={1}
+            slideLeft={slideLeft}
+          />
           <Image img={f} onClick={doStuff} col={3} row={2} />
           <Image img={h} onClick={doStuff} col={3} row={3} />
         </Column>
 
         <Column col={4} row={2} slideOut={slideOut}>
-          <Image img={g} onClick={doStuff} col={4} row={1} />
+          <Image
+            img={g}
+            onClick={doStuff}
+            col={4}
+            row={1}
+            slideLeft={slideLeft}
+          />
           <Image img={i} onClick={doStuff} col={4} row={2} />
           <Image img={d} onClick={doStuff} col={4} row={3} />
         </Column>
         <Column col={5} row={3} slideOut={slideOut}>
-          <Image img={e} onClick={doStuff} col={5} row={1} />
+          <Image
+            img={e}
+            onClick={doStuff}
+            col={5}
+            row={1}
+            slideLeft={slideLeft}
+          />
           <Image img={g} onClick={doStuff} col={5} row={2} />
           <Image img={f} onClick={doStuff} col={5} row={3} />
         </Column>
