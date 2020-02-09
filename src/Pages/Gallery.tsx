@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { instagramImages } from "../constants/endpoints";
-import useSWR from "swr";
-import Loading from "../components/Loading/Loading";
-import axios from "axios";
+// import { instagramImages } from "../constants/endpoints";
+// import useSWR from "swr";
+// import Loading from "../components/Loading/Loading";
+// import axios from "axios";
 import Image from "../components/Image/Image";
 import { mqMediumUp, mqSmallUp, mqLargeUp } from "../utils/mq";
-import { InstagramImagesResponse } from "../types/ApiResponses";
+// import { InstagramImagesResponse } from "../types/ApiResponses";
 import { a, d, e, f, g, h, i } from "../resources";
 
 const StyledImages = styled.div`
@@ -61,7 +61,7 @@ const ShowsWrapper = styled.div<{ slideOut?: boolean }>`
 
 const Gallery = ({ path }: { path: string }) => {
   const [slideOut, setSlideout] = useState(false);
-  const [slideLeft, setSlideLeft] = useState(false);
+  // const [slideLeft, setSlideLeft] = useState(false);
 
   const doStuff = () => {
     setSlideout(!slideOut);
@@ -80,7 +80,7 @@ const Gallery = ({ path }: { path: string }) => {
             onClick={doStuff}
             col={1}
             row={1}
-            slideLeft={slideLeft}
+            // slideLeft={slideLeft}
           />
           <Image img={e} onClick={doStuff} col={1} row={2} />
           <Image img={f} onClick={doStuff} col={1} row={3} />
@@ -92,7 +92,7 @@ const Gallery = ({ path }: { path: string }) => {
             onClick={doStuff}
             col={2}
             row={1}
-            slideLeft={slideLeft}
+            // slideLeft={slideLeft}
           />
           <Image img={h} onClick={doStuff} col={2} row={2} />
           <Image img={i} onClick={doStuff} col={2} row={3} />
@@ -104,7 +104,7 @@ const Gallery = ({ path }: { path: string }) => {
             onClick={doStuff}
             col={3}
             row={1}
-            slideLeft={slideLeft}
+            // slideLeft={slideLeft}
           />
           <Image img={f} onClick={doStuff} col={3} row={2} />
           <Image img={h} onClick={doStuff} col={3} row={3} />
@@ -116,7 +116,7 @@ const Gallery = ({ path }: { path: string }) => {
             onClick={doStuff}
             col={4}
             row={1}
-            slideLeft={slideLeft}
+            // slideLeft={slideLeft}
           />
           <Image img={i} onClick={doStuff} col={4} row={2} />
           <Image img={d} onClick={doStuff} col={4} row={3} />
@@ -127,7 +127,7 @@ const Gallery = ({ path }: { path: string }) => {
             onClick={doStuff}
             col={5}
             row={1}
-            slideLeft={slideLeft}
+            // slideLeft={slideLeft}
           />
           <Image img={g} onClick={doStuff} col={5} row={2} />
           <Image img={f} onClick={doStuff} col={5} row={3} />
