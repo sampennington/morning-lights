@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 // import { instagramImages } from "../constants/endpoints";
 // import useSWR from "swr";
-import Loading from "../components/Loading/Loading";
+// import Loading from "../components/Loading/Loading";
 // import axios from "axios";
 import Image from "../components/Image/Image";
 import { mqMediumUp, mqSmallUp, mqLargeUp } from "../utils/mq";
