@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 // import { instagramImages } from "../constants/endpoints";
 // import useSWR from "swr";
-// import Loading from "../components/Loading/Loading";
+import Loading from "../components/Loading/Loading";
 // import axios from "axios";
 import Image from "../components/Image/Image";
 import { mqMediumUp, mqSmallUp, mqLargeUp } from "../utils/mq";
@@ -141,19 +141,18 @@ const Gallery = ({ path }: { path: string }) => {
 // In The Morning Lights
 export default Gallery;
 
-function shuffle<T>(a: Array<T>): Array<T> {
-  var j, x, i;
-  for (i = a.length - 1; i > 0; i--) {
-    j = Math.floor(Math.random() * (i + 1));
-    x = a[i];
-    a[i] = a[j];
-    a[j] = x;
-  }
-  return a;
-}
+// function shuffle<T>(a: Array<T>): Array<T> {
+//   var j, x, i;
+//   for (i = a.length - 1; i > 0; i--) {
+//     j = Math.floor(Math.random() * (i + 1));
+//     x = a[i];
+//     a[i] = a[j];
+//     a[j] = x;
+//   }
+//   return a;
+// }
 
-{
-  /* {shuffle(
+/* {shuffle(
         images.map(({ node }) => (
           <Image img={node} key={node.id} onClick={doStuff} />
         ))
@@ -163,7 +162,6 @@ function shuffle<T>(a: Array<T>): Array<T> {
           <Image img={node} key={node.id} onClick={doStuff} />
         ))
       )} */
-}
 
 // const { data } = useSWR<InstagramImagesResponse>(instagramImages, axios, {
 //   refreshInterval: 0
