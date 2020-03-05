@@ -4,7 +4,7 @@ import mainImage from "../resources/main.jpg";
 import YouTube from "react-youtube";
 
 const StyledHome = styled.div`
-  // padding-top: 135px;
+  padding-top: 135px;
   position: relative;
 `;
 
@@ -17,7 +17,7 @@ const ComingSoon = styled.h1`
   position: absolute;
   font-size: 90px;
   right: 30px;
-  top: 0px;
+  top: 135px;
   text-align: right;
 `;
 

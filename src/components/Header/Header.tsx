@@ -16,7 +16,7 @@ const StyledHeader = styled.div`
   align-items: center;
   background-color: black;
   height: 135px;
-  // position: fixed;
+  position: fixed;
   width: 100%;
   z-index: 2;
 `;
