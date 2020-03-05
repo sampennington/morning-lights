@@ -1,41 +1,61 @@
 import React from "react";
 import styled from "styled-components";
 import { colours } from "../../constants/colours";
-import logo from "../../resources/morning-lights.jpg";
-import Loading from "../Loading/Loading";
+import logo from "../../resources/logo.jpg";
+import {
+  faFacebookF,
+  faInstagram,
+  faYoutube,
+  faSpotify
+} from "@fortawesome/free-brands-svg-icons";
 import { mqMediumUp } from "../../utils/mq";
-import { Link } from "@reach/router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const StyledHeader = styled.div`
-  // display: none;
-  // padding: 0px 10px;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  width; 100%;
-  font-weight: 700;
-  font-size: 24px;3
-  ${mqMediumUp(`
-    display: flex;
-  `)}
-
-  &:visited {
-  }
+  background-color: black;
+  height: 135px;
+  // position: fixed;
+  width: 100%;
+  z-index: 2;
 `;
 
-const StyledNavItem = styled(Link)`
-  cursor: pointer;
-  color: ${colours.white};
+const SocialMedia = styled.div`
+  display: flex;
+  width: 200px;
+  font-size: 26px;
+  flex-basis: 180px;
+  justify-content: space-between;
+  padding: 0 20px;
 `;
 
 const Logo = styled.img``;
 
+const Spacer = styled.div`
+  flex-basis: 180px;
+  display: none;
+  ${mqMediumUp(`
+    display: block;
+  `)}
+`;
+
+const SocialLink = styled(FontAwesomeIcon)``;
+
 const Header = () => (
   <StyledHeader>
-    <Logo src={logo} width={150}></Logo>
-    <StyledNavItem to="/">Home</StyledNavItem>
-    <StyledNavItem to="/music">Music</StyledNavItem>
-    <StyledNavItem to="/gallery">Gallery</StyledNavItem>
-    <StyledNavItem to="/contact">Contact</StyledNavItem>
+    <Spacer />
+    <Logo src={logo} width={150} alt="" />
+    <SocialMedia>
+      <a href="https://www.facebook.com/inthemorninglights/">
+        <SocialLink icon={faFacebookF} color="white" />
+      </a>
+      <FontAwesomeIcon icon={faInstagram} color="white" />
+      <FontAwesomeIcon icon={faYoutube} color="white" />
+      <FontAwesomeIcon icon={faSpotify} color="white" />
+    </SocialMedia>
+
     {/* <Loading /> */}
   </StyledHeader>
 );

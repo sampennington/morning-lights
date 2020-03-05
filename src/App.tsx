@@ -1,15 +1,15 @@
 import React from "react";
 import { Router } from "@reach/router";
-import ArtPage from "./Pages/Gallery";
-// import Home from "./Pages/Home";
+import Home from "./Pages/Home";
 import { StyledApp } from "./App.styled";
+import { Header } from "./components";
 
 const App = () => {
   return (
     <StyledApp>
+      <Header />
       <Router id="">
-        {/* <Home path="/" /> */}
-        <ArtPage path="/" />
+        <Home path="/" />
       </Router>
     </StyledApp>
   );

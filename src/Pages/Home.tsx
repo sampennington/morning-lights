@@ -1,32 +1,52 @@
 import React from "react";
 import styled from "styled-components";
-import { content } from "../constants/endpoints";
-import useSWR from "swr";
-import Loading from "../components/Loading/Loading";
-import { Contents } from "../types/ApiResponses";
-import { homePageIntro } from "../constants/contentNames";
-import { Content } from "../components";
+import mainImage from "../resources/main.jpg";
+import YouTube from "react-youtube";
 
-const StyledHome = styled.div``;
+const StyledHome = styled.div`
+  // padding-top: 135px;
+  position: relative;
+`;
+
+const MainImage = styled.img`
+  width: 100%;
+`;
+
+const ComingSoon = styled.h1`
+  color: white;
+  position: absolute;
+  font-size: 90px;
+  right: 30px;
+  top: 0px;
+  text-align: right;
+`;
+
+const VideoWrapper = styled.div`
+  position: relative;
+  padding-bottom: 42%;
+  padding-top: 25;
+  height: 0;
+`;
 
 const Home = ({ path }: { path: string }) => {
-  const { data } = useSWR<Contents>(content);
-
-  if (!data) {
-    return <Loading />;
-  }
-
-  const intro = data.find(n => n.name === homePageIntro);
-
   return (
-    <>
-      <StyledHome>
-        <Content edit={true} id={intro?.id} field="title" data={intro}>
-          {intro?.title}
-        </Content>
-      </StyledHome>
-      <StyledHome>{intro?.body}</StyledHome>
-    </>
+    <StyledHome>
+      <ComingSoon>
+        INTO <br />
+        SUNLIGHT
+        <br />
+        COMING <br />
+        SOON
+      </ComingSoon>
+      <MainImage src={mainImage} alt="" />
+      <VideoWrapper>
+        <YouTube
+          videoId="kz1jUh38KLI"
+          opts={{ playerVars: { autoplay: 1, controls: 0 } }}
+          className="youtube-video"
+        />
+      </VideoWrapper>
+    </StyledHome>
   );
 };
 
