@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { colours } from "../../constants/colours";
 import logo from "../../resources/logo.jpg";
 import {
   faFacebookF,

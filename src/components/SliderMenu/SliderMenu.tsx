@@ -1,7 +1,7 @@
 import React from "react";
 import { push as Menu } from "react-burger-menu";
 // import logo from "../../resources/morning-lights.jpg";
-import { StyledSliderMenu, StyledBurger } from "./SliderMenu.styled";
+import { StyledSliderMenu } from "./SliderMenu.styled";
 
 const SliderMenu = () => (
   <StyledSliderMenu>
