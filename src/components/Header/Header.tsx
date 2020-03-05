@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../../resources/logo.jpg";
+import logo from "../../resources/moon.jpg";
 import {
   faFacebookF,
   faInstagram,
@@ -45,12 +45,15 @@ const SocialLink = styled(FontAwesomeIcon)``;
 const Header = () => (
   <StyledHeader>
     <Spacer />
-    <Logo src={logo} width={150} alt="" />
+    <Logo src={logo} width={110} alt="" />
     <SocialMedia>
       <a href="https://www.facebook.com/inthemorninglights/">
         <SocialLink icon={faFacebookF} color="white" />
       </a>
-      <FontAwesomeIcon icon={faInstagram} color="white" />
+
+      <a href="https://www.instagram.com/inthemorninglights/">
+        <FontAwesomeIcon icon={faInstagram} color="white" />
+      </a>
       <FontAwesomeIcon icon={faYoutube} color="white" />
       <FontAwesomeIcon icon={faSpotify} color="white" />
     </SocialMedia>
