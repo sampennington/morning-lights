@@ -5,7 +5,7 @@ import {
   faFacebookF,
   faInstagram,
   faYoutube,
-  faSpotify
+  faSpotify,
 } from "@fortawesome/free-brands-svg-icons";
 import { mqMediumUp } from "../../utils/mq";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -54,8 +54,12 @@ const Header = () => (
       <a href="https://www.instagram.com/inthemorninglights/">
         <FontAwesomeIcon icon={faInstagram} color="white" />
       </a>
-      <FontAwesomeIcon icon={faYoutube} color="white" />
-      <FontAwesomeIcon icon={faSpotify} color="white" />
+      <a href="https://www.youtube.com/channel/UCxpX3jop8Nb4LfZNNzl0t7g/featured">
+        <FontAwesomeIcon icon={faYoutube} color="white" />
+      </a>
+      <a href="https://open.spotify.com/artist/6hSl6WPTZSn5CqujCmpGQ7?si=D80zMfAyTtSiTc27iXMfcQ">
+        <FontAwesomeIcon icon={faSpotify} color="white" />
+      </a>
     </SocialMedia>
 
     {/* <Loading /> */}

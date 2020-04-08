@@ -12,13 +12,25 @@ const MainImage = styled.img`
   width: 100%;
 `;
 
-const ComingSoon = styled.h1`
+const ComingSoon = styled.h2`
   color: white;
-  position: absolute;
-  font-size: 90px;
+  font-size: 37px;
+  margin: 0;
+  font-family: MrEavesReg;
+`;
+
+const IntoSunlight = styled.h1`
+  color: white;
+  font-size: 62px;
+  margin-bottom: 0;
+  font-family: MrEavesBold;
+`;
+
+const Title = styled.div`
   right: 30px;
   top: 135px;
   text-align: right;
+  position: absolute;
 `;
 
 const VideoWrapper = styled.div`
@@ -31,18 +43,18 @@ const VideoWrapper = styled.div`
 const Home = ({ path }: { path: string }) => {
   return (
     <StyledHome>
-      <ComingSoon>
-        INTO <br />
-        SUNLIGHT
-        <br />
-        COMING <br />
-        SOON
-      </ComingSoon>
+      <Title>
+        <IntoSunlight>
+          INTO <br />
+          SUNLIGHT
+        </IntoSunlight>
+        <ComingSoon>COMING SOON</ComingSoon>
+      </Title>
       <MainImage src={mainImage} alt="" />
       <VideoWrapper>
         <YouTube
           videoId="kz1jUh38KLI"
-          opts={{ playerVars: { autoplay: 1, controls: 0 } }}
+          opts={{ playerVars: { autoplay: 0, controls: 0 } }}
           className="youtube-video"
         />
       </VideoWrapper>

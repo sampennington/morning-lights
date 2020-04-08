@@ -1,11 +1,16 @@
 @font-face {
-  font-family: "MrEaves";
+  font-family: "MrEavesReg";
   src: url("./resources/fonts/MrEavesXLModOT-Reg.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MrEavesBold";
+  src: url("./resources/fonts/MrEavesXLModOT-Bold.woff") format("woff");
 }
 
 body {
   margin: 0;
-  font-family: "MrEaves", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "MrEavesReg", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif !important;
   -webkit-font-smoothing: antialiased;
