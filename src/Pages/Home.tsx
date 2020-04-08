@@ -54,7 +54,7 @@ const Home = ({ path }: { path: string }) => {
       <VideoWrapper>
         <YouTube
           videoId="kz1jUh38KLI"
-          opts={{ playerVars: { autoplay: 0, controls: 0 } }}
+          opts={{ playerVars: { autoplay: 1, controls: 0 } }}
           className="youtube-video"
         />
       </VideoWrapper>

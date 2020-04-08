@@ -61,8 +61,6 @@ const Header = () => (
         <FontAwesomeIcon icon={faSpotify} color="white" />
       </a>
     </SocialMedia>
-
-    {/* <Loading /> */}
   </StyledHeader>
 );
 
