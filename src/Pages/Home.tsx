@@ -12,26 +12,26 @@ const MainImage = styled.img`
   width: 100%;
 `;
 
-const ComingSoon = styled.h2`
-  color: white;
-  font-size: 37px;
-  margin: 0;
-  font-family: MrEavesReg;
-`;
+// const ComingSoon = styled.h2`
+//   color: white;
+//   font-size: 37px;
+//   margin: 0;
+//   font-family: MrEavesReg;
+// `;
 
-const IntoSunlight = styled.h1`
-  color: white;
-  font-size: 62px;
-  margin-bottom: 0;
-  font-family: MrEavesBold;
-`;
+// const IntoSunlight = styled.h1`
+//   color: white;
+//   font-size: 62px;
+//   margin-bottom: 0;
+//   font-family: MrEavesBold;
+// `;
 
-const Title = styled.div`
-  right: 30px;
-  top: 135px;
-  text-align: right;
-  position: absolute;
-`;
+// const Title = styled.div`
+//   right: 30px;
+//   top: 135px;
+//   text-align: right;
+//   position: absolute;
+// `;
 
 const VideoWrapper = styled.div`
   position: relative;
