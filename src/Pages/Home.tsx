@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import mainImage from "../resources/main.jpg";
+import mainImage from "../resources/main-image.jpg";
 import YouTube from "react-youtube";
 
 const StyledHome = styled.div`
@@ -43,13 +43,13 @@ const VideoWrapper = styled.div`
 const Home = ({ path }: { path: string }) => {
   return (
     <StyledHome>
-      <Title>
+      {/* <Title>
         <IntoSunlight>
           INTO <br />
           SUNLIGHT
         </IntoSunlight>
         <ComingSoon>COMING SOON</ComingSoon>
-      </Title>
+      </Title> */}
       <MainImage src={mainImage} alt="" />
       <VideoWrapper>
         <YouTube
